@@ -230,7 +230,155 @@ function isaaq_save_meta_boxes( $post_id ) {
 add_action( 'save_post', 'isaaq_save_meta_boxes' );
 
 // ============================================================
-// 5. LINEAGE BANNER SETTINGS PAGE
+// 5. SAMPLE DATA — inserted once on theme activation
+// ============================================================
+
+/**
+ * Insert sample Slides, News, Events and the Lineage Banner the first time
+ * the theme is activated.  Guarded by an option flag so it never runs twice.
+ */
+function isaaq_insert_sample_data() {
+    if ( get_option( 'isaaq_sample_data_inserted' ) ) {
+        return;
+    }
+
+    // ---- SLIDES ------------------------------------------------
+    $slides = array(
+        array(
+            'title'   => 'Welcome to the Isaaq Kingdom',
+            'tagline' => "Tolje'lo Dynasty · Eight Kings · Eight Centuries",
+            'excerpt' => 'Discover the living legacy of the Isaaq Kingdom — a rich tapestry of sovereignty, Islamic scholarship, and Somali heritage.',
+            'order'   => 1,
+        ),
+        array(
+            'title'   => 'King Dhuuh Baraar',
+            'tagline' => "The Last Sovereign of the Tolje'lo Dynasty",
+            'excerpt' => "Revered as the eighth and final king of the Tolje'lo line, King Dhuuh Baraar's reign cemented the cultural and spiritual identity of the Isaaq people.",
+            'order'   => 2,
+        ),
+        array(
+            'title'   => 'Sheikh Ishaaq Bin Ahmed',
+            'tagline' => '12th-Century Scholar & Founding Father',
+            'excerpt' => 'A learned Qureshi scholar who sailed to the Horn of Africa, married into the region, and became the ancestor of the eight great Isaaq clans.',
+            'order'   => 3,
+        ),
+    );
+
+    foreach ( $slides as $slide ) {
+        $post_id = wp_insert_post( array(
+            'post_title'   => $slide['title'],
+            'post_excerpt' => $slide['excerpt'],
+            'post_status'  => 'publish',
+            'post_type'    => 'isaaq_slide',
+            'menu_order'   => $slide['order'],
+        ) );
+        if ( $post_id && ! is_wp_error( $post_id ) ) {
+            update_post_meta( $post_id, '_isaaq_slide_tagline', $slide['tagline'] );
+        }
+    }
+
+    // ---- NEWS --------------------------------------------------
+    $news_items = array(
+        array(
+            'title'    => 'Annual Heritage Commemoration 2025',
+            'category' => 'Heritage',
+            'content'  => "The Isaaq community gathered in Hargeisa for the annual Tolje'lo heritage day. Elders delivered the oral history of the eight kings while traditional poetry (gabay) was performed in the open courtyard of the old city. The event drew thousands of attendees from across Somaliland and the diaspora.",
+        ),
+        array(
+            'title'    => "Restoration of Sheikh Ishaaq's Mausoleum Begins",
+            'category' => 'Culture',
+            'content'  => 'Work has officially started on the preservation of the historic mausoleum in Maydh. The project, funded by the Isaaq Cultural Foundation, aims to restore the 800-year-old site to its former glory and establish an on-site museum cataloguing manuscripts and artefacts.',
+        ),
+        array(
+            'title'    => 'Youth Leadership Summit – Carrying the Legacy Forward',
+            'category' => 'Community',
+            'content'  => "Over 200 young Isaaq leaders participated in a three-day summit focused on the kingdom's governance traditions, xeer customary law, and strategies for preserving cultural identity in the modern era. Keynote addresses were delivered by senior Guurti council members.",
+        ),
+        array(
+            'title'    => 'New Documentary: "Eight Kings of the North"',
+            'category' => 'Media',
+            'content'  => "A full-length documentary tracing the reigns of the eight Tolje'lo kings has been completed and will premiere next month. The film blends archival photographs, oral testimony, and animated maps to bring the kingdom's history to life for global audiences.",
+        ),
+    );
+
+    foreach ( $news_items as $item ) {
+        $post_id = wp_insert_post( array(
+            'post_title'   => $item['title'],
+            'post_content' => $item['content'],
+            'post_status'  => 'publish',
+            'post_type'    => 'isaaq_news',
+        ) );
+        if ( $post_id && ! is_wp_error( $post_id ) ) {
+            update_post_meta( $post_id, '_isaaq_news_category', $item['category'] );
+        }
+    }
+
+    // ---- EVENTS ------------------------------------------------
+    $events = array(
+        array(
+            'title'   => "Tolje'lo Heritage Day",
+            'content' => "Annual gathering to honour the memory of the eight Tolje'lo kings. Ceremonies include recitation of royal lineage, traditional poetry, and a community feast.",
+            'year'    => '2025',
+            'extra'   => 'Held every year on the last Friday of April in Hargeisa, Somaliland.',
+        ),
+        array(
+            'title'   => 'Sheikh Ishaaq Memorial Pilgrimage',
+            'content' => 'Communities travel to Maydh on the northern coast to pay respects at the mausoleum of Sheikh Ishaaq Bin Ahmed, the founding patriarch of the Isaaq clans.',
+            'year'    => '2025',
+            'extra'   => 'Open to all Isaaq clan members and respectful visitors. Transport arranged from Berbera.',
+        ),
+        array(
+            'title'   => 'Guurti Council Assembly',
+            'content' => 'Senior Guurti elders assembled to review customary law (xeer) and address inter-clan matters in accordance with centuries-old traditions of the Isaaq Kingdom.',
+            'year'    => '2024',
+            'extra'   => 'Closed session; summary resolutions published publicly thereafter.',
+        ),
+        array(
+            'title'   => 'Royal Lineage Oral History Workshop',
+            'content' => 'A two-day workshop where master oral historians (odayaasha) recorded and transcribed the complete lineage of the Tolje\'lo dynasty for archival preservation.',
+            'year'    => '2024',
+            'extra'   => 'Recordings deposited with the Somaliland National Archive and the Isaaq Cultural Foundation.',
+        ),
+        array(
+            'title'   => "Foundation of the Tolje'lo Dynasty",
+            'content' => "King Harun, the first Tolje'lo ruler, established the Isaaq Kingdom following the decline of the Adal Sultanate, uniting the Isaaq clans under a single royal house.",
+            'year'    => '~1300s',
+            'extra'   => 'Historical event — commemorated annually.',
+        ),
+        array(
+            'title'   => 'Reign of King Dhuuh Baraar',
+            'content' => "The eighth and final Tolje'lo king consolidated the spiritual and cultural institutions of the kingdom, leaving a legacy that endures in modern Somali society.",
+            'year'    => '~1700s',
+            'extra'   => 'Historical event — subject of ongoing scholarly research.',
+        ),
+    );
+
+    foreach ( $events as $event ) {
+        $post_id = wp_insert_post( array(
+            'post_title'   => $event['title'],
+            'post_content' => $event['content'],
+            'post_status'  => 'publish',
+            'post_type'    => 'isaaq_event',
+        ) );
+        if ( $post_id && ! is_wp_error( $post_id ) ) {
+            update_post_meta( $post_id, '_isaaq_event_year',  $event['year'] );
+            update_post_meta( $post_id, '_isaaq_event_extra', $event['extra'] );
+        }
+    }
+
+    // ---- LINEAGE BANNER ----------------------------------------
+    update_option(
+        'isaaq_lineage_banner',
+        "Sheikh Ishaaq Bin Ahmed → King Harun (1st) → King Ali (2nd) → King Ibrahim (3rd) → King Darod (4th) → King Musa (5th) → King Hasan (6th) → King Qaalib (7th) → King Dhuuh Baraar (8th)"
+    );
+
+    // Mark as done so this never runs again
+    update_option( 'isaaq_sample_data_inserted', true );
+}
+add_action( 'after_switch_theme', 'isaaq_insert_sample_data' );
+
+// ============================================================
+// 6. LINEAGE BANNER SETTINGS PAGE
 // ============================================================
 
 function isaaq_admin_menu() {
@@ -278,7 +426,7 @@ function isaaq_settings_page_cb() {
 }
 
 // ============================================================
-// 6. CUSTOM NAV WALKER (outputs <a> tags directly in floating-nav)
+// 7. CUSTOM NAV WALKER (outputs <a> tags directly in floating-nav)
 // ============================================================
 
 class Isaaq_Nav_Walker extends Walker_Nav_Menu {
@@ -309,7 +457,7 @@ class Isaaq_Nav_Walker extends Walker_Nav_Menu {
 }
 
 // ============================================================
-// 7. HELPER: OUTPUT FLOATING NAV
+// 8. HELPER: OUTPUT FLOATING NAV
 // ============================================================
 
 /**
