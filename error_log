@@ -1,0 +1,20 @@
+[06-Mar-2026 15:10:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_all() in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php:17
+Stack trace:
+#0 /home/hargeisacom/public_html/test.hargeisaweb.com/index.php(7): Database->getSlides()
+#1 {main}
+  thrown in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php on line 17
+[06-Mar-2026 15:22:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_all() in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php:17
+Stack trace:
+#0 /home/hargeisacom/public_html/test.hargeisaweb.com/index.php(7): Database->getSlides()
+#1 {main}
+  thrown in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php on line 17
+[07-Mar-2026 21:12:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_all() in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php:17
+Stack trace:
+#0 /home/hargeisacom/public_html/test.hargeisaweb.com/index.php(7): Database->getSlides()
+#1 {main}
+  thrown in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php on line 17
+[07-Mar-2026 21:12:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_all() in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php:17
+Stack trace:
+#0 /home/hargeisacom/public_html/test.hargeisaweb.com/index.php(7): Database->getSlides()
+#1 {main}
+  thrown in /home/hargeisacom/public_html/test.hargeisaweb.com/database.php on line 17
