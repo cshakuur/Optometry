@@ -110,6 +110,34 @@ if ( $slides_query->have_posts() ) {
         <?php endif; ?>
     </div>
 
+    <!-- ===================== HIS MAJESTY PREVIEW ===================== -->
+    <?php if ( $king_id ) : ?>
+    <section style="margin:3rem 0;">
+        <h2 class="section-title">
+            <i class="fas fa-crown title-icon"></i><?php esc_html_e( 'His Royal Majesty', 'isaaq-kingdom' ); ?>
+        </h2>
+        <div class="king-panel">
+            <div class="king-left">
+                <div class="king-photo" style="background:var(--charcoal);display:flex;align-items:center;justify-content:center;">
+                    <i class="fas fa-crown" style="font-size:5rem;color:var(--gold-leaf);"></i>
+                </div>
+            </div>
+            <div class="king-right">
+                <div class="king-name"><?php esc_html_e( 'King Dhuuh Baraar', 'isaaq-kingdom' ); ?></div>
+                <div class="king-badge"><i class="fas fa-feather"></i> <?php esc_html_e( "Tolje'lo Dynasty · Last Sovereign (early 1700s)", 'isaaq-kingdom' ); ?></div>
+                <p><?php esc_html_e( "King Dhuuh Baraar stands as the final monarch of the historic Isaaq Kingdom. As a ruler of the Tolje'lo dynasty, he embodied the legacy tracing back to Sheikh Ishaaq Bin Ahmed. His reign marks the culmination of eight Tolje'lo kings who guided the Isaaq clans from the 13th century — shaping identity, justice, and resilience in the Horn of Africa.", 'isaaq-kingdom' ); ?></p>
+                <h3 style="color:var(--sapphire);margin:1.5rem 0 1rem;font-size:1.4rem;"><?php esc_html_e( "The Tolje'lo Dynasty", 'isaaq-kingdom' ); ?></h3>
+                <p><?php esc_html_e( "The Tolje'lo dynasty ruled the Isaaq Kingdom for over 400 years. The lineage began with King Harun in the 14th century and ended with King Dhuuh Baraar in the early 1700s — eight kings who built a legacy of governance, scholarship, and unity.", 'isaaq-kingdom' ); ?></p>
+                <div style="margin-top:1.5rem;">
+                    <a href="<?php echo esc_url( get_permalink( $king_id ) ); ?>" class="back-button">
+                        <?php esc_html_e( 'Full Royal Profile', 'isaaq-kingdom' ); ?> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
+
     <!-- ===================== HISTORY HIGHLIGHTS ===================== -->
     <?php if ( $history_id ) : ?>
     <section style="margin:3rem 0;">
@@ -136,6 +164,50 @@ if ( $slides_query->have_posts() ) {
         <div style="text-align:center;margin-top:1.5rem;">
             <a href="<?php echo esc_url( get_permalink( $history_id ) ); ?>" class="back-button">
                 <?php esc_html_e( 'Full History', 'isaaq-kingdom' ); ?> <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+    <?php endif; ?>
+
+    <!-- ===================== HERITAGE PREVIEW ===================== -->
+    <?php if ( $heritage_id ) : ?>
+    <section style="margin:3rem 0;">
+        <h2 class="section-title">
+            <i class="fas fa-images title-icon"></i><?php esc_html_e( 'Royal Heritage', 'isaaq-kingdom' ); ?>
+        </h2>
+
+        <!-- Lineage Banner -->
+        <div class="lineage-banner-modern" style="margin-bottom:2rem;">
+            <?php echo esc_html( get_option( 'isaaq_lineage_banner', "Sheikh Ishaaq → Tolje'lo Dynasty → 8 Isaaq Clans → Harun · Ibrahim · Yaqut · Mohammed · Dhuuh Baraar" ) ); ?>
+        </div>
+
+        <!-- Cultural Treasures -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;">
+            <div style="background:white;border-radius:40px;padding:2rem;text-align:center;box-shadow:var(--shadow-strong);">
+                <i class="fas fa-scroll" style="font-size:2.8rem;color:var(--ruby);margin-bottom:1rem;display:block;"></i>
+                <h3 style="color:var(--sapphire);font-size:1.3rem;"><?php esc_html_e( 'Ancient Manuscripts', 'isaaq-kingdom' ); ?></h3>
+                <p style="font-size:0.95rem;"><?php esc_html_e( 'Islamic texts and historical records preserved for centuries', 'isaaq-kingdom' ); ?></p>
+            </div>
+            <div style="background:white;border-radius:40px;padding:2rem;text-align:center;box-shadow:var(--shadow-strong);">
+                <i class="fas fa-music" style="font-size:2.8rem;color:var(--ruby);margin-bottom:1rem;display:block;"></i>
+                <h3 style="color:var(--sapphire);font-size:1.3rem;"><?php esc_html_e( 'Royal Gabay', 'isaaq-kingdom' ); ?></h3>
+                <p style="font-size:0.95rem;"><?php esc_html_e( 'Traditional poetry and oral traditions passed through generations', 'isaaq-kingdom' ); ?></p>
+            </div>
+            <div style="background:white;border-radius:40px;padding:2rem;text-align:center;box-shadow:var(--shadow-strong);">
+                <i class="fas fa-gem" style="font-size:2.8rem;color:var(--ruby);margin-bottom:1rem;display:block;"></i>
+                <h3 style="color:var(--sapphire);font-size:1.3rem;"><?php esc_html_e( 'Royal Artifacts', 'isaaq-kingdom' ); ?></h3>
+                <p style="font-size:0.95rem;"><?php esc_html_e( 'Ceremonial items and symbols of kingship', 'isaaq-kingdom' ); ?></p>
+            </div>
+            <div style="background:white;border-radius:40px;padding:2rem;text-align:center;box-shadow:var(--shadow-strong);">
+                <i class="fas fa-mosque" style="font-size:2.8rem;color:var(--ruby);margin-bottom:1rem;display:block;"></i>
+                <h3 style="color:var(--sapphire);font-size:1.3rem;"><?php esc_html_e( 'Sacred Sites', 'isaaq-kingdom' ); ?></h3>
+                <p style="font-size:0.95rem;"><?php esc_html_e( 'Shrines, mosques, and holy places of the Isaaq Kingdom', 'isaaq-kingdom' ); ?></p>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:1.5rem;">
+            <a href="<?php echo esc_url( get_permalink( $heritage_id ) ); ?>" class="back-button">
+                <?php esc_html_e( 'Full Heritage Gallery', 'isaaq-kingdom' ); ?> <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </section>
