@@ -708,8 +708,6 @@ html {
     border-color: rgba(201, 168, 76, 0.4);
     box-shadow: var(--shadow-gold), var(--shadow-deep);
     background: rgba(201, 168, 76, 0.04);
-    color: var(--text-primary);
-    text-decoration: none;
 }
 
 .history-icon {
