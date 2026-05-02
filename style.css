@@ -1,17 +1,3 @@
-/*
-Theme Name: Isaaq Kingdom
-Theme URI: https://github.com/cshakuur/Optometry
-Author: Isaaq Kingdom
-Description: Royal heritage theme for the Isaaq Kingdom website — Tolje’lo dynasty, history, heritage, news and events.
-Version: 1.0.0
-Requires at least: 5.8
-Tested up to: 6.5
-Requires PHP: 7.4
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: isaaq-kingdom
-Tags: heritage, royal, custom-post-types, one-column, two-columns, custom-menu, featured-images, theme-options
-*/
 /* ===================================================================
    ISAAQ KINGDOM — PREMIUM DARK LUXURY THEME
    Dark palette · Glassmorphism · Gold accents · Apple/Tesla inspired
@@ -37,9 +23,9 @@ Tags: heritage, royal, custom-post-types, one-column, two-columns, custom-menu, 
     --gold-glow:  rgba(201, 168, 76, 0.35);
 
     /* Legacy variable remaps (backward-compat with inline styles) */
-    --sapphire:   #c9a84c;
-    --ruby:       #c44536;
-    --amber:      #c9a84c;
+    --sapphire:   #c9a84c;          /* remapped → gold */
+    --ruby:       #c44536;          /* kept */
+    --amber:      #c9a84c;          /* remapped → gold */
     --cream:      rgba(201, 168, 76, 0.07);
     --ivory:      rgba(10, 15, 30, 0.85);
     --charcoal:   #0c1022;
@@ -59,6 +45,12 @@ Tags: heritage, royal, custom-post-types, one-column, two-columns, custom-menu, 
     --shadow-deep:   0 30px 60px -20px rgba(0, 0, 0, 0.85);
 }
 
+/* ===== BASE ===== */
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--bg-deep);
@@ -66,11 +58,6 @@ body {
     overflow-x: hidden;
     width: 100%;
     line-height: 1.6;
-}
-
-html {
-    font-size: 14px;
-    scroll-behavior: smooth;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -391,11 +378,12 @@ html {
     .floating-nav a { font-size: 1rem; padding: 0.5rem 1.1rem; font-weight: 700; }
 }
 
-.floating-nav a:hover,
-.floating-nav a.active,
-.floating-nav li.current-menu-item > a,
-.floating-nav li.current_page_item > a,
-.floating-nav li.current-page-ancestor > a {
+.floating-nav a:hover {
+    background: rgba(201, 168, 76, 0.12);
+    color: var(--gold-light);
+}
+
+.floating-nav a.active {
     background: linear-gradient(135deg, var(--gold), var(--gold-light));
     color: var(--bg-deep) !important;
     box-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
@@ -412,30 +400,6 @@ html {
     background: rgba(196, 69, 54, 0.85);
     color: white !important;
     border-color: var(--ruby);
-}
-
-/* Strip list styling when WP outputs <ul><li> in nav */
-.floating-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (min-width: 480px) {
-    .floating-nav ul { gap: 0.6rem; }
-}
-
-@media (min-width: 768px) {
-    .floating-nav ul { gap: 0.4rem; }
-}
-
-.floating-nav li {
-    list-style: none;
 }
 
 /* ===== CONTAINER & SECTIONS ===== */
@@ -643,6 +607,16 @@ html {
     .king-right p { font-size: 1.15rem; margin-bottom: 2rem; }
 }
 
+.king-right h3 {
+    color: var(--gold) !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .king-right h3 { font-size: 1.8rem; }
+}
+
 .btn-king {
     background: transparent;
     border: 1px solid rgba(201, 168, 76, 0.5);
@@ -694,9 +668,6 @@ html {
     box-shadow: var(--shadow-deep);
     border: 1px solid var(--glass-border);
     transition: all 0.35s ease;
-    color: var(--text-primary);
-    text-decoration: none;
-    display: block;
 }
 
 @media (min-width: 768px) {
@@ -760,9 +731,6 @@ html {
     border: 1px solid var(--glass-border);
     transition: all 0.35s ease;
     cursor: pointer;
-    text-decoration: none;
-    display: block;
-    color: var(--text-primary);
 }
 
 @media (min-width: 768px) { .news-super { border-radius: 40px 10px 40px 10px; } }
@@ -771,8 +739,6 @@ html {
     transform: translateY(-8px);
     border-color: rgba(201, 168, 76, 0.4);
     box-shadow: var(--shadow-gold), var(--shadow-deep);
-    color: var(--text-primary);
-    text-decoration: none;
 }
 
 .news-img-super {
@@ -849,8 +815,6 @@ html {
     box-shadow: var(--shadow-deep);
     transition: all 0.28s ease;
     cursor: pointer;
-    text-decoration: none;
-    color: var(--text-primary);
 }
 
 @media (min-width: 480px) {
@@ -872,8 +836,6 @@ html {
     box-shadow: var(--shadow-gold);
     border-color: rgba(201, 168, 76, 0.35);
     border-left-color: var(--gold-light);
-    color: var(--text-primary);
-    text-decoration: none;
 }
 
 @media (min-width: 768px) { .event-item-distinct:hover { transform: translateX(14px); } }
@@ -951,7 +913,6 @@ html {
     border-color: rgba(201, 168, 76, 0.4);
     transform: translateY(-8px);
     box-shadow: var(--shadow-gold);
-    color: var(--text-primary);
 }
 
 .heritage-piece h3 {
@@ -1105,105 +1066,18 @@ html {
     box-shadow: 0 0 30px rgba(201, 168, 76, 0.4);
     transform: translateY(-2px);
     border-color: var(--gold);
-    text-decoration: none;
 }
 
 .back-button i { margin-right: 0.5rem; }
 
-/* ===== SINGLE NEWS / EVENT ===== */
-.single-content-wrap {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+/* ===== GLASS CARD UTILITY (used by inline sections) ===== */
+.glass-card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: var(--text-primary) !important;
     border-radius: 40px;
     padding: 2rem;
     box-shadow: var(--shadow-deep);
-    border: 1px solid var(--glass-border);
-    margin: 2rem 0;
-    color: var(--text-primary);
-}
-
-@media (min-width: 768px) {
-    .single-content-wrap { padding: 3rem; border-radius: 60px; }
-}
-
-.single-featured-img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 30px;
-    margin-bottom: 2rem;
-    border: 1px solid var(--glass-border);
-}
-
-@media (min-width: 768px) {
-    .single-featured-img { height: 450px; border-radius: 40px; }
-}
-
-.single-content-wrap .entry-content {
-    color: rgba(244, 237, 216, 0.85);
-    line-height: 1.8;
-}
-
-.single-content-wrap .entry-content h1,
-.single-content-wrap .entry-content h2,
-.single-content-wrap .entry-content h3 {
-    color: var(--text-primary);
-    font-family: 'Playfair Display', serif;
-    margin: 1.5rem 0 0.8rem;
-}
-
-.single-content-wrap .entry-content a {
-    color: var(--gold-light);
-}
-
-.single-content-wrap .entry-content a:hover {
-    color: var(--gold);
-}
-
-/* ===== NO HERO PAGES — nav at top ===== */
-.floating-nav.no-hero {
-    margin-top: 1.5rem;
-}
-
-/* ===== WP ALIGNMENT & BLOCK UTILITIES ===== */
-.alignleft  { float: left; margin: 0.5rem 1.5rem 1rem 0; }
-.alignright { float: right; margin: 0.5rem 0 1rem 1.5rem; }
-.aligncenter { display: block; margin: 1rem auto; }
-.wp-caption { max-width: 100%; }
-.wp-caption-text { text-align: center; font-style: italic; font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.3rem; }
-
-/* WP pagination */
-.nav-links {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem 0;
-}
-
-.nav-links a,
-.nav-links span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 38px;
-    height: 38px;
-    padding: 0 0.8rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    background: var(--glass-bg);
-    color: var(--text-secondary);
-    border: 1px solid var(--glass-border);
-    transition: all 0.25s ease;
-}
-
-.nav-links a:hover,
-.nav-links span.current {
-    background: var(--gold);
-    color: var(--bg-deep);
-    border-color: var(--gold);
-    box-shadow: 0 0 20px rgba(201, 168, 76, 0.35);
 }

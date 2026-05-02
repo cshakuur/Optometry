@@ -47,7 +47,7 @@ $events = $db->getEvents();
 
     <!-- Event Modal -->
     <div id="eventModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-        <div style="background: white; border-radius: 60px; max-width: 500px; width: 90%; padding: 2rem; position: relative;">
+        <div style="background: var(--glass-bg); backdrop-filter: blur(24px); border-radius: 40px; max-width: 500px; width: 90%; padding: 2rem; position: relative; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
             <button onclick="closeEventModal()" style="position: absolute; top: 1rem; right: 1rem; background: var(--ruby); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;">×</button>
             <div id="eventModalContent"></div>
         </div>
@@ -56,23 +56,23 @@ $events = $db->getEvents();
     <!-- Calendar Section -->
     <section style="margin: 4rem 0;">
         <h2 class="section-title"><i class="fas fa-calendar-alt title-icon"></i> Event Calendar</h2>
-        <div style="background: white; border-radius: 60px; padding: 2rem; text-align: center;">
+        <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
             <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; margin-bottom: 1rem;">
                 <?php 
                 $days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
                 foreach ($days as $day) {
-                    echo "<div style='font-weight: 800; color: var(--sapphire);'>$day</div>";
+                    echo "<div style='font-weight: 800; color: var(--gold);'>$day</div>";
                 }
                 
                 // Simple calendar grid
                 for ($i = 1; $i <= 30; $i++) {
                     $hasEvent = ($i == 15 || $i == 22) ? true : false;
-                    $style = $hasEvent ? "background: var(--ruby); color: white; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; margin: 0 auto; cursor: pointer;" : "width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; margin: 0 auto;";
+                    $style = $hasEvent ? "background: var(--gold); color: var(--bg-deep); border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; margin: 0 auto; cursor: pointer; font-weight: 800;" : "width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--text-secondary);";
                     echo "<div style='$style' onclick=\"alert('Event on day $i')\">$i</div>";
                 }
                 ?>
             </div>
-            <p style="margin-top: 1rem; color: var(--sapphire);"><i class="fas fa-circle" style="color: var(--ruby);"></i> Red dots indicate event days</p>
+            <p style="margin-top: 1rem; color: var(--text-secondary);"><i class="fas fa-circle" style="color: var(--gold);"></i> Gold dots indicate event days</p>
         </div>
     </section>
 
@@ -87,11 +87,11 @@ function openEventModal(event) {
     const content = document.getElementById('eventModalContent');
     
     content.innerHTML = `
-        <h2 style="color: var(--ruby); margin-bottom: 1rem;">${event.event_name}</h2>
-        <div style="background: var(--cream); border-radius: 30px; padding: 1rem; margin-bottom: 1rem;">
-            <p><strong>Year:</strong> ${event.event_year}</p>
-            <p><strong>Description:</strong> ${event.description}</p>
-            ${event.extra_info ? `<p><strong>Additional Info:</strong> ${event.extra_info}</p>` : ''}
+        <h2 style="color: var(--gold); margin-bottom: 1rem;">${event.event_name}</h2>
+        <div style="background: rgba(201, 168, 76, 0.07); border-radius: 30px; padding: 1rem; margin-bottom: 1rem; border: 1px solid var(--glass-border);">
+            <p style="color: var(--text-primary);"><strong style="color: var(--gold);">Year:</strong> ${event.event_year}</p>
+            <p style="color: var(--text-primary);"><strong style="color: var(--gold);">Description:</strong> ${event.description}</p>
+            ${event.extra_info ? `<p style="color: var(--text-primary);"><strong style="color: var(--gold);">Additional Info:</strong> ${event.extra_info}</p>` : ''}
         </div>
         <button onclick="closeEventModal()" class="btn-king" style="width: 100%;">Close</button>
     `;

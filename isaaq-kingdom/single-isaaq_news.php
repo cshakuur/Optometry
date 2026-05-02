@@ -32,7 +32,7 @@ isaaq_floating_nav( true );
         <?php endif; ?>
 
         <?php if ( $category ) : ?>
-        <span style="background:var(--ruby);color:white;padding:0.3rem 1.5rem;border-radius:40px;font-size:0.9rem;display:inline-block;margin-bottom:1.5rem;">
+        <span style="background:var(--gold);color:var(--bg-deep);padding:0.3rem 1.5rem;border-radius:40px;font-size:0.9rem;font-weight:800;display:inline-block;margin-bottom:1.5rem;">
             <?php echo esc_html( $category ); ?>
         </span>
         <?php endif; ?>
@@ -41,7 +41,7 @@ isaaq_floating_nav( true );
             <?php the_content(); ?>
         </div>
 
-        <small style="color:#666;display:block;margin-top:2rem;">
+        <small style="color:var(--text-secondary);display:block;margin-top:2rem;">
             <i class="fas fa-calendar"></i> <?php echo esc_html( get_the_date() ); ?>
         </small>
     </div>

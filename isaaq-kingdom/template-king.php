@@ -25,7 +25,7 @@ isaaq_floating_nav( true );
                      alt="<?php esc_attr_e( 'King Dhuuh Baraar', 'isaaq-kingdom' ); ?>"
                      class="king-photo">
                 <?php else : ?>
-                <div class="king-photo" style="background:var(--charcoal);display:flex;align-items:center;justify-content:center;">
+                <div class="king-photo" style="display:flex;align-items:center;justify-content:center;">
                     <i class="fas fa-crown" style="font-size:5rem;color:var(--gold-leaf);"></i>
                 </div>
                 <?php endif; ?>
@@ -35,7 +35,7 @@ isaaq_floating_nav( true );
                 <div class="king-badge"><i class="fas fa-feather"></i> <?php esc_html_e( "Tolje'lo dynasty · last sovereign (early 1700s)", 'isaaq-kingdom' ); ?></div>
                 <p><?php esc_html_e( 'King Dhuuh Baraar stands as the final monarch of the historic Isaaq Kingdom. As a ruler of the Tolje\'lo dynasty, he embodied the legacy tracing back to Sheikh Ishaaq Bin Ahmed. His reign marks the culmination of eight Tolje\'lo kings who guided the Isaaq clans from the 13th century — shaping identity, justice, and resilience in the Horn of Africa.', 'isaaq-kingdom' ); ?></p>
 
-                <h3 style="color:var(--sapphire);margin:1.5rem 0 1rem;"><?php esc_html_e( "The Tolje'lo Dynasty", 'isaaq-kingdom' ); ?></h3>
+                <h3 style="color:var(--gold);margin:1.5rem 0 1rem;"><?php esc_html_e( "The Tolje'lo Dynasty", 'isaaq-kingdom' ); ?></h3>
                 <p><?php esc_html_e( "The Tolje'lo dynasty ruled the Isaaq Kingdom for over 400 years, with eight kings leading the nation through prosperity, conflict, and cultural development. The lineage began with King Harun in the 14th century and ended with King Dhuuh Baraar in the early 1700s.", 'isaaq-kingdom' ); ?></p>
 
                 <?php if ( get_the_content() ) : ?>

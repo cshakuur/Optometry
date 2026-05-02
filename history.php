@@ -49,44 +49,44 @@ $db = new Database();
     <!-- Detailed History -->
     <section style="margin: 3rem 0;">
         <h2 class="section-title"><i class="fas fa-scroll title-icon"></i> The Founding</h2>
-        <div style="background: white; border-radius: 60px; padding: 2rem; box-shadow: var(--shadow-strong);">
-            <p style="font-size: 1.1rem; line-height: 1.8;">Sheikh Ishaaq Bin Ahmed, a revered Islamic scholar, arrived in the Horn of Africa during the 12th century. He settled in the region of Maydh, where his message and leadership united the local clans. His eight sons became the progenitors of the eight major Isaaq clans:</p>
+        <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; box-shadow: var(--shadow-deep); border: 1px solid var(--glass-border);">
+            <p style="font-size: 1.1rem; line-height: 1.8; color: rgba(244, 237, 216, 0.85);">Sheikh Ishaaq Bin Ahmed, a revered Islamic scholar, arrived in the Horn of Africa during the 12th century. He settled in the region of Maydh, where his message and leadership united the local clans. His eight sons became the progenitors of the eight major Isaaq clans:</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Habr Awal</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Habr Awal</strong>
                 </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Habr Je'lo</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Habr Je'lo</strong>
                 </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Habr Yunis</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Habr Yunis</strong>
                 </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Arap</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Arap</strong>
                 </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Ayub</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Ayub</strong>
                 </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Garhajis</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Garhajis</strong>
                 </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Habar Magaadle</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Habar Magaadle</strong>
                 </div>
-                <div style="background: var(--cream); padding: 1rem; border-radius: 30px; text-align: center;">
-                    <strong>Muuse</strong>
+                <div style="background: rgba(201, 168, 76, 0.08); padding: 1rem; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border);">
+                    <strong style="color: var(--text-primary);">Muuse</strong>
                 </div>
             </div>
             
-            <p style="font-size: 1.1rem; line-height: 1.8;">The Tolje'lo dynasty emerged as the ruling house, with King Harun becoming the first king in the 14th century. The kingdom flourished through trade, Islamic scholarship, and a unique system of governance combining customary law (xeer) with Islamic principles.</p>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: rgba(244, 237, 216, 0.85);">The Tolje'lo dynasty emerged as the ruling house, with King Harun becoming the first king in the 14th century. The kingdom flourished through trade, Islamic scholarship, and a unique system of governance combining customary law (xeer) with Islamic principles.</p>
         </div>
     </section>
 
     <!-- Legacy Section -->
-    <section style="margin: 3rem 0; background: linear-gradient(135deg, #0f4c5c, #1a6a7a); border-radius: 60px; padding: 3rem 2rem; color: white; text-align: center;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem;">The Guurti Council & Xeer Law</h2>
-        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">The Isaaq Kingdom was renowned for its sophisticated governance system. The Guurti council of elders, combined with xeer customary law, created a framework for justice and conflict resolution that continues to influence Somali society today.</p>
+    <section style="margin: 3rem 0; background: linear-gradient(135deg, rgba(5,8,16,0.95), rgba(10,15,30,0.98)); border-radius: 60px; padding: 3rem 2rem; color: white; text-align: center; border: 1px solid var(--glass-border);">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary);">The Guurti Council & Xeer Law</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-secondary);">The Isaaq Kingdom was renowned for its sophisticated governance system. The Guurti council of elders, combined with xeer customary law, created a framework for justice and conflict resolution that continues to influence Somali society today.</p>
     </section>
 
     <div style="text-align: center; margin: 3rem 0;">

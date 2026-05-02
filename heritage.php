@@ -59,20 +59,20 @@ $lineage = $db->getLineageBanner();
     <section style="margin: 3rem 0;">
         <h2 class="section-title"><i class="fas fa-landmark title-icon"></i> Cultural Treasures</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-            <div style="background: white; border-radius: 40px; padding: 2rem; text-align: center;">
-                <i class="fas fa-scroll" style="font-size: 3rem; color: var(--ruby); margin-bottom: 1rem;"></i>
-                <h3 style="color: var(--sapphire);">Ancient Manuscripts</h3>
-                <p>Islamic texts and historical records preserved for centuries</p>
+            <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; text-align: center; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
+                <i class="fas fa-scroll" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--text-primary);">Ancient Manuscripts</h3>
+                <p style="color: var(--text-secondary);">Islamic texts and historical records preserved for centuries</p>
             </div>
-            <div style="background: white; border-radius: 40px; padding: 2rem; text-align: center;">
-                <i class="fas fa-music" style="font-size: 3rem; color: var(--ruby); margin-bottom: 1rem;"></i>
-                <h3 style="color: var(--sapphire);">Royal Gabay</h3>
-                <p>Traditional poetry and oral traditions passed through generations</p>
+            <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; text-align: center; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
+                <i class="fas fa-music" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--text-primary);">Royal Gabay</h3>
+                <p style="color: var(--text-secondary);">Traditional poetry and oral traditions passed through generations</p>
             </div>
-            <div style="background: white; border-radius: 40px; padding: 2rem; text-align: center;">
-                <i class="fas fa-gem" style="font-size: 3rem; color: var(--ruby); margin-bottom: 1rem;"></i>
-                <h3 style="color: var(--sapphire);">Royal Artifacts</h3>
-                <p>Ceremonial items and symbols of kingship</p>
+            <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; text-align: center; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
+                <i class="fas fa-gem" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--text-primary);">Royal Artifacts</h3>
+                <p style="color: var(--text-secondary);">Ceremonial items and symbols of kingship</p>
             </div>
         </div>
     </section>

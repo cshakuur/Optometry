@@ -36,7 +36,7 @@ $db = new Database();
                 <div class="king-badge"><i class="fas fa-feather"></i> Tolje'lo dynasty · last sovereign (early 1700s)</div>
                 <p>King Dhuuh Baraar stands as the final monarch of the historic Isaaq Kingdom. As a ruler of the Tolje'lo dynasty, he embodied the legacy tracing back to Sheikh Isaaq Bin Ahmed. His reign marks the culmination of eight Tolje'lo kings who guided the Isaaq clans from the 13th century — shaping identity, justice, and resilience in the Horn of Africa.</p>
                 
-                <h3 style="color: var(--sapphire); margin: 1.5rem 0 1rem;">The Tolje'lo Dynasty</h3>
+                <h3 style="color: var(--gold); margin: 1.5rem 0 1rem;">The Tolje'lo Dynasty</h3>
                 <p>The Tolje'lo dynasty ruled the Isaaq Kingdom for over 400 years, with eight kings leading the nation through prosperity, conflict, and cultural development. The lineage began with King Harun in the 14th century and ended with King Dhuuh Baraar in the early 1700s.</p>
                 
                 <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">

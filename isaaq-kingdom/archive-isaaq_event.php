@@ -33,7 +33,7 @@ isaaq_floating_nav( true );
                     <h3><?php the_title(); ?></h3>
                     <p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 25 ) ); ?></p>
                     <?php if ( $extra ) : ?>
-                    <small style="color:var(--ruby);">
+                    <small style="color:var(--gold);">
                         <i class="fas fa-info-circle"></i> <?php echo esc_html( $extra ); ?>
                     </small>
                     <?php endif; ?>

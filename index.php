@@ -89,7 +89,7 @@ $homeEvents = array_slice($events, 0, 3);
         <h2 class="section-title"><i class="fas fa-crown title-icon"></i> His Royal Majesty</h2>
         <div class="king-panel">
             <div class="king-left">
-                <div class="king-photo" style="background: var(--charcoal); display: flex; align-items: center; justify-content: center;">
+                <div class="king-photo" style="display: flex; align-items: center; justify-content: center;">
                     <i class="fas fa-crown" style="font-size: 5rem; color: var(--gold-leaf);"></i>
                 </div>
             </div>
@@ -97,7 +97,7 @@ $homeEvents = array_slice($events, 0, 3);
                 <div class="king-name">King Dhuuh Baraar</div>
                 <div class="king-badge"><i class="fas fa-feather"></i> Tolje'lo Dynasty · Last Sovereign (early 1700s)</div>
                 <p>King Dhuuh Baraar stands as the final monarch of the historic Isaaq Kingdom. As a ruler of the Tolje'lo dynasty, he embodied the legacy tracing back to Sheikh Isaaq Bin Ahmed. His reign marks the culmination of eight Tolje'lo kings who guided the Isaaq clans from the 13th century — shaping identity, justice, and resilience in the Horn of Africa.</p>
-                <h3 style="color: var(--sapphire); margin: 1.5rem 0 1rem; font-size: 1.4rem;">The Tolje'lo Dynasty</h3>
+                <h3 style="color: var(--gold); margin: 1.5rem 0 1rem; font-size: 1.4rem;">The Tolje'lo Dynasty</h3>
                 <p>The Tolje'lo dynasty ruled the Isaaq Kingdom for over 400 years. The lineage began with King Harun in the 14th century and ended with King Dhuuh Baraar in the early 1700s — eight kings who built a legacy of governance, scholarship, and unity.</p>
                 <div style="margin-top: 1.5rem;">
                     <a href="king.php" class="back-button">Full Royal Profile <i class="fas fa-arrow-right"></i></a>
@@ -142,25 +142,25 @@ $homeEvents = array_slice($events, 0, 3);
 
         <!-- Cultural Treasures -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-            <div style="background: white; border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-strong);">
-                <i class="fas fa-scroll" style="font-size: 2.8rem; color: var(--ruby); margin-bottom: 1rem; display: block;"></i>
-                <h3 style="color: var(--sapphire); font-size: 1.3rem;">Ancient Manuscripts</h3>
-                <p style="font-size: 0.95rem;">Islamic texts and historical records preserved for centuries</p>
+            <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-deep); border: 1px solid var(--glass-border);">
+                <i class="fas fa-scroll" style="font-size: 2.8rem; color: var(--gold); margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--text-primary); font-size: 1.3rem;">Ancient Manuscripts</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Islamic texts and historical records preserved for centuries</p>
             </div>
-            <div style="background: white; border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-strong);">
-                <i class="fas fa-music" style="font-size: 2.8rem; color: var(--ruby); margin-bottom: 1rem; display: block;"></i>
-                <h3 style="color: var(--sapphire); font-size: 1.3rem;">Royal Gabay</h3>
-                <p style="font-size: 0.95rem;">Traditional poetry and oral traditions passed through generations</p>
+            <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-deep); border: 1px solid var(--glass-border);">
+                <i class="fas fa-music" style="font-size: 2.8rem; color: var(--gold); margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--text-primary); font-size: 1.3rem;">Royal Gabay</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Traditional poetry and oral traditions passed through generations</p>
             </div>
-            <div style="background: white; border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-strong);">
-                <i class="fas fa-gem" style="font-size: 2.8rem; color: var(--ruby); margin-bottom: 1rem; display: block;"></i>
-                <h3 style="color: var(--sapphire); font-size: 1.3rem;">Royal Artifacts</h3>
-                <p style="font-size: 0.95rem;">Ceremonial items and symbols of kingship</p>
+            <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-deep); border: 1px solid var(--glass-border);">
+                <i class="fas fa-gem" style="font-size: 2.8rem; color: var(--gold); margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--text-primary); font-size: 1.3rem;">Royal Artifacts</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Ceremonial items and symbols of kingship</p>
             </div>
-            <div style="background: white; border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-strong);">
-                <i class="fas fa-mosque" style="font-size: 2.8rem; color: var(--ruby); margin-bottom: 1rem; display: block;"></i>
-                <h3 style="color: var(--sapphire); font-size: 1.3rem;">Sacred Sites</h3>
-                <p style="font-size: 0.95rem;">Shrines, mosques, and holy places of the Isaaq Kingdom</p>
+            <div style="background: var(--glass-bg); backdrop-filter: blur(20px); border-radius: 40px; padding: 2rem; text-align: center; box-shadow: var(--shadow-deep); border: 1px solid var(--glass-border);">
+                <i class="fas fa-mosque" style="font-size: 2.8rem; color: var(--gold); margin-bottom: 1rem; display: block;"></i>
+                <h3 style="color: var(--text-primary); font-size: 1.3rem;">Sacred Sites</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">Shrines, mosques, and holy places of the Isaaq Kingdom</p>
             </div>
         </div>
 
@@ -196,7 +196,7 @@ $homeEvents = array_slice($events, 0, 3);
 
     <!-- News Modal -->
     <div id="newsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-        <div style="background: white; border-radius: 60px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 2rem; position: relative;">
+        <div style="background: var(--glass-bg); backdrop-filter: blur(24px); border-radius: 40px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 2rem; position: relative; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
             <button onclick="closeNewsModal()" style="position: absolute; top: 1rem; right: 1rem; background: var(--ruby); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;">×</button>
             <div id="modalContent"></div>
         </div>
@@ -228,7 +228,7 @@ $homeEvents = array_slice($events, 0, 3);
 
     <!-- Event Modal -->
     <div id="eventModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-        <div style="background: white; border-radius: 60px; max-width: 500px; width: 90%; padding: 2rem; position: relative;">
+        <div style="background: var(--glass-bg); backdrop-filter: blur(24px); border-radius: 40px; max-width: 500px; width: 90%; padding: 2rem; position: relative; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
             <button onclick="closeEventModal()" style="position: absolute; top: 1rem; right: 1rem; background: var(--ruby); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;">×</button>
             <div id="eventModalContent"></div>
         </div>
@@ -272,10 +272,10 @@ function openNewsModal(item) {
     if (!modal) return;
     document.getElementById('modalContent').innerHTML = `
         <img src="${item.image_path}" alt="${item.title}" style="width:100%;height:250px;object-fit:cover;border-radius:30px;margin-bottom:1.5rem;">
-        <span style="background:var(--ruby);color:white;padding:0.3rem 1.5rem;border-radius:40px;font-size:0.9rem;display:inline-block;margin-bottom:1rem;">${item.category}</span>
-        <h2 style="color:var(--sapphire);margin-bottom:1rem;">${item.title}</h2>
-        <p style="line-height:1.8;margin-bottom:1rem;">${item.description}</p>
-        <small style="color:#666;"><i class="fas fa-calendar"></i> ${new Date().toLocaleDateString()}</small>
+        <span style="background:var(--gold);color:var(--bg-deep);padding:0.3rem 1.5rem;border-radius:40px;font-size:0.9rem;font-weight:800;display:inline-block;margin-bottom:1rem;">${item.category}</span>
+        <h2 style="color:var(--text-primary);margin-bottom:1rem;">${item.title}</h2>
+        <p style="line-height:1.8;margin-bottom:1rem;color:rgba(244,237,216,0.85);">${item.description}</p>
+        <small style="color: var(--text-secondary);"><i class="fas fa-calendar"></i> ${new Date().toLocaleDateString()}</small>
     `;
     modal.style.display = 'flex';
 }
@@ -290,11 +290,11 @@ function openEventModal(event) {
     const modal = document.getElementById('eventModal');
     if (!modal) return;
     document.getElementById('eventModalContent').innerHTML = `
-        <h2 style="color:var(--ruby);margin-bottom:1rem;">${event.event_name}</h2>
-        <div style="background:var(--cream);border-radius:30px;padding:1rem;margin-bottom:1rem;">
-            <p><strong>Year:</strong> ${event.event_year}</p>
-            <p><strong>Description:</strong> ${event.description}</p>
-            ${event.extra_info ? `<p><strong>Additional Info:</strong> ${event.extra_info}</p>` : ''}
+        <h2 style="color:var(--gold);margin-bottom:1rem;">${event.event_name}</h2>
+        <div style="background:rgba(201,168,76,0.07);border-radius:30px;padding:1rem;margin-bottom:1rem;border:1px solid var(--glass-border);">
+            <p style="color:var(--text-primary);"><strong style="color:var(--gold);">Year:</strong> ${event.event_year}</p>
+            <p style="color:var(--text-primary);"><strong style="color:var(--gold);">Description:</strong> ${event.description}</p>
+            ${event.extra_info ? `<p style="color:var(--text-primary);"><strong style="color:var(--gold);">Additional Info:</strong> ${event.extra_info}</p>` : ''}
         </div>
         <button onclick="closeEventModal()" class="btn-king" style="width:100%;">Close</button>
     `;

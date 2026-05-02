@@ -39,21 +39,21 @@ isaaq_floating_nav( true );
     <!-- The Founding -->
     <section style="margin:3rem 0;">
         <h2 class="section-title"><i class="fas fa-scroll title-icon"></i> <?php esc_html_e( 'The Founding', 'isaaq-kingdom' ); ?></h2>
-        <div style="background:white;border-radius:60px;padding:2rem;box-shadow:var(--shadow-strong);">
-            <p style="font-size:1.1rem;line-height:1.8;"><?php esc_html_e( 'Sheikh Ishaaq Bin Ahmed, a revered Islamic scholar, arrived in the Horn of Africa during the 12th century. He settled in the region of Maydh, where his message and leadership united the local clans. His eight sons became the progenitors of the eight major Isaaq clans:', 'isaaq-kingdom' ); ?></p>
+        <div style="background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:40px;padding:2rem;box-shadow:var(--shadow-deep);border:1px solid var(--glass-border);">
+            <p style="font-size:1.1rem;line-height:1.8;color:rgba(244,237,216,0.85);"><?php esc_html_e( 'Sheikh Ishaaq Bin Ahmed, a revered Islamic scholar, arrived in the Horn of Africa during the 12th century. He settled in the region of Maydh, where his message and leadership united the local clans. His eight sons became the progenitors of the eight major Isaaq clans:', 'isaaq-kingdom' ); ?></p>
 
             <?php
             $clans = array( 'Habr Awal', "Habr Je'lo", 'Habr Yunis', 'Arap', 'Ayub', 'Garhajis', 'Habar Magaadle', 'Muuse' );
             ?>
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:2rem 0;">
                 <?php foreach ( $clans as $clan ) : ?>
-                <div style="background:var(--cream);padding:1rem;border-radius:30px;text-align:center;">
-                    <strong><?php echo esc_html( $clan ); ?></strong>
+                <div style="background:rgba(201,168,76,0.08);padding:1rem;border-radius:30px;text-align:center;border:1px solid var(--glass-border);">
+                    <strong style="color:var(--text-primary);"><?php echo esc_html( $clan ); ?></strong>
                 </div>
                 <?php endforeach; ?>
             </div>
 
-            <p style="font-size:1.1rem;line-height:1.8;"><?php esc_html_e( "The Tolje'lo dynasty emerged as the ruling house, with King Harun becoming the first king in the 14th century. The kingdom flourished through trade, Islamic scholarship, and a unique system of governance combining customary law (xeer) with Islamic principles.", 'isaaq-kingdom' ); ?></p>
+            <p style="font-size:1.1rem;line-height:1.8;color:rgba(244,237,216,0.85);"><?php esc_html_e( "The Tolje'lo dynasty emerged as the ruling house, with King Harun becoming the first king in the 14th century. The kingdom flourished through trade, Islamic scholarship, and a unique system of governance combining customary law (xeer) with Islamic principles.", 'isaaq-kingdom' ); ?></p>
         </div>
     </section>
 
@@ -63,8 +63,8 @@ isaaq_floating_nav( true );
         if ( get_the_content() ) :
     ?>
     <section style="margin:3rem 0;">
-        <div style="background:white;border-radius:60px;padding:2rem;box-shadow:var(--shadow-strong);">
-            <div class="entry-content">
+        <div style="background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:40px;padding:2rem;box-shadow:var(--shadow-deep);border:1px solid var(--glass-border);">
+            <div class="entry-content" style="color:rgba(244,237,216,0.85);line-height:1.8;">
                 <?php the_content(); ?>
             </div>
         </div>
@@ -75,9 +75,9 @@ isaaq_floating_nav( true );
     ?>
 
     <!-- Legacy Section -->
-    <section style="margin:3rem 0;background:linear-gradient(135deg,#0f4c5c,#1a6a7a);border-radius:60px;padding:3rem 2rem;color:white;text-align:center;">
-        <h2 style="font-family:'Playfair Display',serif;font-size:2.5rem;margin-bottom:1.5rem;"><?php esc_html_e( 'The Guurti Council &amp; Xeer Law', 'isaaq-kingdom' ); ?></h2>
-        <p style="font-size:1.2rem;max-width:800px;margin:0 auto;"><?php esc_html_e( 'The Isaaq Kingdom was renowned for its sophisticated governance system. The Guurti council of elders, combined with xeer customary law, created a framework for justice and conflict resolution that continues to influence Somali society today.', 'isaaq-kingdom' ); ?></p>
+    <section style="margin:3rem 0;background:linear-gradient(135deg,rgba(5,8,16,0.95),rgba(10,15,30,0.98));border-radius:60px;padding:3rem 2rem;color:white;text-align:center;border:1px solid var(--glass-border);">
+        <h2 style="font-family:'Playfair Display',serif;font-size:2.5rem;margin-bottom:1.5rem;color:var(--text-primary);"><?php esc_html_e( 'The Guurti Council &amp; Xeer Law', 'isaaq-kingdom' ); ?></h2>
+        <p style="font-size:1.2rem;max-width:800px;margin:0 auto;color:var(--text-secondary);"><?php esc_html_e( 'The Isaaq Kingdom was renowned for its sophisticated governance system. The Guurti council of elders, combined with xeer customary law, created a framework for justice and conflict resolution that continues to influence Somali society today.', 'isaaq-kingdom' ); ?></p>
     </section>
 
     <div style="text-align:center;margin:3rem 0;">

@@ -76,8 +76,8 @@ $lineage = get_option( 'isaaq_lineage_banner', "Sheikh Ishaaq → Tolje'lo Dynas
         if ( get_the_content() ) :
     ?>
     <section style="margin:3rem 0;">
-        <div style="background:white;border-radius:60px;padding:2rem;box-shadow:var(--shadow-strong);">
-            <div class="entry-content">
+        <div style="background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:40px;padding:2rem;box-shadow:var(--shadow-deep);border:1px solid var(--glass-border);">
+            <div class="entry-content" style="color:rgba(244,237,216,0.85);line-height:1.8;">
                 <?php the_content(); ?>
             </div>
         </div>
@@ -91,20 +91,20 @@ $lineage = get_option( 'isaaq_lineage_banner', "Sheikh Ishaaq → Tolje'lo Dynas
     <section style="margin:3rem 0;">
         <h2 class="section-title"><i class="fas fa-landmark title-icon"></i> <?php esc_html_e( 'Cultural Treasures', 'isaaq-kingdom' ); ?></h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;">
-            <div style="background:white;border-radius:40px;padding:2rem;text-align:center;">
-                <i class="fas fa-scroll" style="font-size:3rem;color:var(--ruby);margin-bottom:1rem;display:block;"></i>
-                <h3 style="color:var(--sapphire);"><?php esc_html_e( 'Ancient Manuscripts', 'isaaq-kingdom' ); ?></h3>
-                <p><?php esc_html_e( 'Islamic texts and historical records preserved for centuries', 'isaaq-kingdom' ); ?></p>
+            <div style="background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:40px;padding:2rem;text-align:center;box-shadow:var(--shadow-deep);border:1px solid var(--glass-border);">
+                <i class="fas fa-scroll" style="font-size:3rem;color:var(--gold);margin-bottom:1rem;display:block;filter:drop-shadow(0 0 10px rgba(201,168,76,0.5));"></i>
+                <h3 style="color:var(--text-primary);"><?php esc_html_e( 'Ancient Manuscripts', 'isaaq-kingdom' ); ?></h3>
+                <p style="color:var(--text-secondary);"><?php esc_html_e( 'Islamic texts and historical records preserved for centuries', 'isaaq-kingdom' ); ?></p>
             </div>
-            <div style="background:white;border-radius:40px;padding:2rem;text-align:center;">
-                <i class="fas fa-music" style="font-size:3rem;color:var(--ruby);margin-bottom:1rem;display:block;"></i>
-                <h3 style="color:var(--sapphire);"><?php esc_html_e( 'Royal Gabay', 'isaaq-kingdom' ); ?></h3>
-                <p><?php esc_html_e( 'Traditional poetry and oral traditions passed through generations', 'isaaq-kingdom' ); ?></p>
+            <div style="background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:40px;padding:2rem;text-align:center;box-shadow:var(--shadow-deep);border:1px solid var(--glass-border);">
+                <i class="fas fa-music" style="font-size:3rem;color:var(--gold);margin-bottom:1rem;display:block;filter:drop-shadow(0 0 10px rgba(201,168,76,0.5));"></i>
+                <h3 style="color:var(--text-primary);"><?php esc_html_e( 'Royal Gabay', 'isaaq-kingdom' ); ?></h3>
+                <p style="color:var(--text-secondary);"><?php esc_html_e( 'Traditional poetry and oral traditions passed through generations', 'isaaq-kingdom' ); ?></p>
             </div>
-            <div style="background:white;border-radius:40px;padding:2rem;text-align:center;">
-                <i class="fas fa-gem" style="font-size:3rem;color:var(--ruby);margin-bottom:1rem;display:block;"></i>
-                <h3 style="color:var(--sapphire);"><?php esc_html_e( 'Royal Artifacts', 'isaaq-kingdom' ); ?></h3>
-                <p><?php esc_html_e( 'Ceremonial items and symbols of kingship', 'isaaq-kingdom' ); ?></p>
+            <div style="background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:40px;padding:2rem;text-align:center;box-shadow:var(--shadow-deep);border:1px solid var(--glass-border);">
+                <i class="fas fa-gem" style="font-size:3rem;color:var(--gold);margin-bottom:1rem;display:block;filter:drop-shadow(0 0 10px rgba(201,168,76,0.5));"></i>
+                <h3 style="color:var(--text-primary);"><?php esc_html_e( 'Royal Artifacts', 'isaaq-kingdom' ); ?></h3>
+                <p style="color:var(--text-secondary);"><?php esc_html_e( 'Ceremonial items and symbols of kingship', 'isaaq-kingdom' ); ?></p>
             </div>
         </div>
     </section>
