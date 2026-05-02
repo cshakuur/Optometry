@@ -33,7 +33,7 @@ isaaq_floating_nav( true );
                 <div class="news-content-super">
                     <h3><?php the_title(); ?></h3>
                     <p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></p>
-                    <small style="color:var(--ruby);display:block;margin-top:1rem;">
+                    <small style="color:var(--gold);display:block;margin-top:1rem;">
                         <i class="fas fa-clock"></i> <?php echo esc_html( get_the_date() ); ?>
                     </small>
                 </div>

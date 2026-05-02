@@ -27,13 +27,13 @@ isaaq_floating_nav( true );
              class="single-featured-img">
         <?php endif; ?>
 
-        <div style="background:var(--cream);border-radius:30px;padding:1.5rem;margin-bottom:1.5rem;">
+        <div style="background:rgba(201,168,76,0.07);border-radius:30px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid var(--glass-border);">
             <?php if ( $year ) : ?>
-            <p><strong><?php esc_html_e( 'Year:', 'isaaq-kingdom' ); ?></strong> <?php echo esc_html( $year ); ?></p>
+            <p style="color:var(--text-primary);"><strong style="color:var(--gold);"><?php esc_html_e( 'Year:', 'isaaq-kingdom' ); ?></strong> <?php echo esc_html( $year ); ?></p>
             <?php endif; ?>
             <?php if ( $extra ) : ?>
-            <p style="margin-top:0.5rem;">
-                <strong><?php esc_html_e( 'Additional Info:', 'isaaq-kingdom' ); ?></strong> <?php echo esc_html( $extra ); ?>
+            <p style="margin-top:0.5rem;color:var(--text-primary);">
+                <strong style="color:var(--gold);"><?php esc_html_e( 'Additional Info:', 'isaaq-kingdom' ); ?></strong> <?php echo esc_html( $extra ); ?>
             </p>
             <?php endif; ?>
         </div>
