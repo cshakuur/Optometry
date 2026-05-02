@@ -48,7 +48,7 @@ $news = $db->getNews();
 
     <!-- News Modal -->
     <div id="newsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; justify-content: center; align-items: center;">
-        <div style="background: white; border-radius: 60px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 2rem; position: relative;">
+        <div style="background: var(--glass-bg); backdrop-filter: blur(24px); border-radius: 40px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 2rem; position: relative; border: 1px solid var(--glass-border); box-shadow: var(--shadow-deep);">
             <button onclick="closeNewsModal()" style="position: absolute; top: 1rem; right: 1rem; background: var(--ruby); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.2rem;">×</button>
             <div id="modalContent"></div>
         </div>
@@ -66,10 +66,10 @@ function openNewsModal(item) {
     
     content.innerHTML = `
         <img src="${item.image_path}" alt="${item.title}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 30px; margin-bottom: 1.5rem;">
-        <span style="background: var(--ruby); color: white; padding: 0.3rem 1.5rem; border-radius: 40px; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem;">${item.category}</span>
-        <h2 style="color: var(--sapphire); margin-bottom: 1rem;">${item.title}</h2>
-        <p style="line-height: 1.8; margin-bottom: 1rem;">${item.description}</p>
-        <small style="color: #666;"><i class="fas fa-calendar"></i> ${new Date().toLocaleDateString()}</small>
+        <span style="background: var(--gold); color: var(--bg-deep); padding: 0.3rem 1.5rem; border-radius: 40px; font-size: 0.9rem; font-weight: 800; display: inline-block; margin-bottom: 1rem;">${item.category}</span>
+        <h2 style="color: var(--text-primary); margin-bottom: 1rem;">${item.title}</h2>
+        <p style="line-height: 1.8; margin-bottom: 1rem; color: rgba(244, 237, 216, 0.85);">${item.description}</p>
+        <small style="color: var(--text-secondary);"><i class="fas fa-calendar"></i> ${new Date().toLocaleDateString()}</small>
     `;
     
     modal.style.display = 'flex';
